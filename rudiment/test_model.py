@@ -16,9 +16,9 @@ def train_process(path,category):
     for line in pd.read_json(path,lines=True)['content']:
         data.append([preprocess(line), category])
     return data
-tech_path = '/home/lxy/Documents/train_t_i/tech.json'
-investment_path = '/home/lxy/Documents/train_t_i/investment.json'
-test_data = train_process(tech_path,'tech')[251:] + train_process(investment_path,'investment')[251:]
+tech_path = '/home/lxy/Downloads/tech.json'
+investment_path = '/home/lxy/Downloads/investment.json'
+test_data = train_process(tech_path,'tech')[:201] + train_process(investment_path,'investment')[:201]
 
 with open('/home/lxy/Documents/train_t_i/nbs.pickle','rb') as fr:
     """
