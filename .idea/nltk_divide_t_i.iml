@@ -2,7 +2,11 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
+<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Python 3.5.2+ virtualenv at ~/workspace/nltk/nltk_env" jdkType="Python SDK" />
+=======
+    <orderEntry type="jdk" jdkName="Python 3.5.2+ virtualenv at ~/workspace/NLTK/nltk_env" jdkType="Python SDK" />
+>>>>>>> 6a81e153dfef561abaf54851d51932e0b17db92d
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">
