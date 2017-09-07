@@ -16,10 +16,10 @@ def train_process(path,category):
     for line in pd.read_json(path,lines=True)['content']:
         data.append([preprocess(line), category])
     return data
-tech_path = '/home/lxy/Documents/train_t_i/tech.json'
-investment_path = '/home/lxy/Documents/train_t_i/investment.json'
-train_data = train_process(tech_path,'tech')[:250] + train_process(investment_path,'investment')[:250]
+tech_path = '/home/lxy/tech.json'
+investment_path = '/home/lxy/investment.json'
+train_data = train_process(tech_path,'tech')[:4800] + train_process(investment_path,'investment')[:4800]
 model = NaiveBayesClassifier.train(train_data)
-with open('/home/lxy/Documents/train_t_i/nbs.pickle','wb') as fw:
+with open('/home/lxy/Documents/nbs_5000.pickle','wb') as fw:
     pickle.dump(model,fw)
 #print(model.classify(preprocess('Chinese co-working office space URWork is moving a step further to catch up with its U.S. peer WeWork, at least in valuation. The company announced today the completion of 400 million RM')))
