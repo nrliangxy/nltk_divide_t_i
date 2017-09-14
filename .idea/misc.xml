@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.5.2+ virtualenv at ~/workspace/nltk/nltk_env" project-jdk-type="Python SDK" />
+=======
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.5.2+ virtualenv at ~/workspace/NLTK/nltk_env" project-jdk-type="Python SDK" />
+>>>>>>> 6a81e153dfef561abaf54851d51932e0b17db92d
 </project>
