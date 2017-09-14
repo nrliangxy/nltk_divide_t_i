@@ -63,7 +63,7 @@ train_set=[]
 test_set=[]
 for i in range(100):
 	try:
-		train_test_all=getTrainData("/home/lxy/Downloads/category/category%.2d.csv"%i,i)
+		train_test_all=getTrainData("/home/lxy/Downloads/category_1/category%.2d.csv"%i,i)
 		if len(train_test_all)>10:
 			train_set.extend(train_test_all[:-5])
 			test_set.extend(train_test_all[-5:])
@@ -76,13 +76,13 @@ print (">>>>>>>>>>")
 print ("testing_amount",len(test_set))
 print (">>>>>>>>>>>>>")
 classifier_0 = nltk.NaiveBayesClassifier.train(train_set)
-dumpModel(classifier_0,"model_all")
-classifier_1=loadModel("model_all")
+dumpModel(classifier_0,"/home/lxy/Downloads/model_all.pickle")
+classifier_1=loadModel("/home/lxy/Downloads/model_all.pickle")
 
 
 test="this company is for farming and plastic"
 test0=dict([(i,True) for i in test.split()])
 print ('Accuracy: %.4f'%nltk.classify.accuracy(classifier_1, test_set))
-print (classifier_1.show_most_informative_features() )
+print (classifier_1.show_most_informative_features())
 #for test_set in test
-print (classifier_1.classify(test0) )
+print (classifier_1.classify(test0))
